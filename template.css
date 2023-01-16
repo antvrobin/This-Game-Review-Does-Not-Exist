@@ -114,6 +114,8 @@ details > summary {
   border:1px solid black;
 }
 
+a { outline: none; }
+
 #idDiv{
   float:left;
   color:rgb(100, 117, 128);
@@ -140,15 +142,18 @@ details > summary {
 }
 
 #username {
-  display: inline-block;
   font-weight: bold;
   font-size: 13px;
   transform: translate(0, -4px);
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
+}
+
+#usernameDiv{
   width: 145px;
-  height: 14px;
+  height:14px;
+  display:inline-block;
+  padding-bottom:30px;
 }
 
 #username:hover{
@@ -346,11 +351,25 @@ details > summary {
       0 0 10px rgb(252, 248, 9),
       0 0 15px rgb(252, 248, 9),
       0 0 20px rgb(252, 248, 9),
-      0 0 40px #fff,
-      0 0 80px #fff,
-      0 0 90px #fff,
-      0 0 100px #fff,
-      0 0 150px #fff;
+      0 0 25px #fff,
+      0 0 30px #fff,
+      0 0 35px #fff;
+    
+  animation: glowExpand 1s ease-in-out infinite alternate;
+}
+
+
+@keyframes glowExpand{
+  100%{
+    text-shadow:
+      0 0 10px rgb(252, 248, 9),
+      0 0 15px rgb(252, 248, 9),
+      0 0 20px rgb(252, 248, 9),
+      0 0 25px rgb(252, 248, 9),
+      0 0 30px #fff,
+      0 0 35px #fff,
+      0 0 40px #fff;
+  }
 }
 
 .inlineText{
