@@ -11,30 +11,29 @@ fix most of the issues, but hey, it works.-->
 <body>
    <h1 class="whiteText">This Game Review Does Not Exist</h1>
    <div class="content">
-      <h3 id="gameName" class="whiteText">GAME</h3>
+      <h3 id="gameName" class="whiteText"></h3>
       <div class="break" id="reviewBreak"></div>
       <div id="reviewDiv" onmouseover="highlightText(true);" onmouseout="highlightText(false);">
          <div id="profileStuff">
             <!--I am going to add placeholder data.
       I will either delete it when I add the
       data via code or I will just replace it.-->
-            <img id="profPic"
-               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+            <img id="profPic">
             <!--Profile Pic-->
-            <p id="username">Gamer23</p> <!--Username-->
-            <p id="prods">100 products in account</p> <!--Products in Account-->
-            <p id="amtOfReviews">50 reviews</p> <!--Amount of Reviews-->
+            <p id="username"></p> <!--Username-->
+            <p id="prods"></p> <!--Products in Account-->
+            <p id="amtOfReviews"></p> <!--Amount of Reviews-->
          </div>
          <div id="recommendation">
             <img id="recoPic"
                src="https://store.akamai.steamstatic.com/public/shared/images/userreviews/icon_thumbsUp_v6.png">
             <!--Thumbs Up or Thumbs Down-->
             <h2 id="recommendationText">Recommended</h2>
-            <p id="hoursText">20 hours on record</p> <!--Hours on Record, Hours at Review Time-->
+            <p id="hoursText"></p> <!--Hours on Record, Hours at Review Time-->
          </div>
          <div id="actualReview">
-            <p id="postedDate">POSTED: JANUARY 12, 2022</p> <!--Posted Date-->
-            <p id="reviewText">This is a review.
+            <p id="postedDate"></p> <!--Posted Date-->
+            <p id="reviewText">
             </p> <!--Review-->
          </div>
          <div id="helpfulBreak"></div>
@@ -53,10 +52,12 @@ fix most of the issues, but hey, it works.-->
                   src="https://store.akamai.steamstatic.com/public/shared/images//award_icon.svg">Award</button>
          </div>
          <div id="votesDiv">
-            <p id="helpfulVotes">30 people found this review helpful</p> <!--Helpful-->
-            <p id="funnyVotes">15 people found this review funny</p> <!--Funny-->
-
+            <p id="helpfulVotes"></p> <!--Helpful-->
+            <p id="funnyVotes"></p> <!--Funny-->
          </div>
+         <div id="idDiv">
+            <p id="parentReviewID" class="inlineText">Review ID: <p id="reviewID" class="inlineText"></p></p>
+            </div>
       </div>
       <details id="updates">
          <summary id="updatesTitle">
@@ -71,16 +72,15 @@ fix most of the issues, but hey, it works.-->
             <p class="goldenText inlineText">glow golden</p>, showing that you supported me!</p>
             <p>I'll also let you include a link to whatever you want (within reason) when somebody clicks on your
                username!</p>
-            <p class="inlineText">Include this review's ID in your message, which is: "
-            <p id="reviewID" class="inlineText"></p>"</p>
+            <p>Make sure to include this review's ID in your message!</p>
             <p> Disclaimer: This "adoption" will last until this website is taken offline, which could be at anytime. I
                reserve
                the right to decline usernames or links for any reason.</p>
             </p>
          </div>
       </details>
-      <button id="leftArrow"><</button>
-            <button id="rightArrow">></button>
+      <button onclick="leftArrowChange()" id="leftArrow"><</button>
+            <button onclick="rightArrowChange()" id="rightArrow">></button>
    </div>
    <footer>
       <p> Disclaimer: Reviews may contain mature language or themes due to the dataset.
