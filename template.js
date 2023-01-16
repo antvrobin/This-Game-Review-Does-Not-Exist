@@ -3,6 +3,8 @@ var reviews = {"Portal 2":{"reviews":{"1":["6388.5","True","569","688","This gam
 //This will be added to as people donate. It will include the id, the username, and the link the donator wants.
 var donatorsDict = {};
 
+
+//This may not be the best way to do this, but it works for now.
 window.onload = function () {
 	//Load up a random review on page load.
 	var keys = Object.keys(reviews);
