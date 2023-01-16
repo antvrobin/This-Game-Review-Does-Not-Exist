@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Code could definitely be improved haha. I made this pretty quickly. With enough time, I think I could
+fix most of the issues, but hey, it works.-->
+<html lang="en">
+
+<head>
+   <title>This Game Review Does Not Exist</title>
+   <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+   <h1 class="whiteText">This Game Review Does Not Exist</h1>
+   <div class="content">
+      <h3 id="gameName" class="whiteText">GAME</h3>
+      <div class="break" id="reviewBreak"></div>
+      <div id="reviewDiv" onmouseover="highlightText(true);" onmouseout="highlightText(false);">
+         <div id="profileStuff">
+            <!--I am going to add placeholder data.
+      I will either delete it when I add the
+      data via code or I will just replace it.-->
+            <img id="profPic"
+               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+            <!--Profile Pic-->
+            <p id="username">Gamer23</p> <!--Username-->
+            <p id="prods">100 products in account</p> <!--Products in Account-->
+            <p id="amtOfReviews">50 reviews</p> <!--Amount of Reviews-->
+         </div>
+         <div id="recommendation">
+            <img id="recoPic"
+               src="https://store.akamai.steamstatic.com/public/shared/images/userreviews/icon_thumbsUp_v6.png">
+            <!--Thumbs Up or Thumbs Down-->
+            <h2 id="recommendationText">Recommended</h2>
+            <p id="hoursText">20 hours on record</p> <!--Hours on Record, Hours at Review Time-->
+         </div>
+         <div id="actualReview">
+            <p id="postedDate">POSTED: JANUARY 12, 2022</p> <!--Posted Date-->
+            <p id="reviewText">This is a review.
+            </p> <!--Review-->
+         </div>
+         <div id="helpfulBreak"></div>
+         <div id="helpfulOrFunnyVoting">
+            <p id="helpfulText">Was this review helpful?</p>
+            <button id="yesButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="yesButtonImg">Yes</button>
+            <button id="noButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="noButtonImg">No</button>
+            <button id="funnyButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="funnyButtonImg">Funny</button>
+            <button id="awardButton" class="round"><img id="awardButtonImg"
+                  src="https://store.akamai.steamstatic.com/public/shared/images//award_icon.svg">Award</button>
+         </div>
+         <div id="votesDiv">
+            <p id="helpfulVotes">30 people found this review helpful</p> <!--Helpful-->
+            <p id="funnyVotes">15 people found this review funny</p> <!--Funny-->
+
+         </div>
+      </div>
+      <details id="updates">
+         <summary id="updatesTitle">
+            <p>Love this Review? <b>Adopt it.</b> Click for more info.</p>
+         </summary>
+         <div id="insideUpdates">
+            <p>Support me for $5 (bottom left of the page) and I'll change the username on any review to whatever you
+               want
+               (within reason).</p>
+            <p>Donations help keep this website online!</p>
+            <p class="inlineText">Your review's username will
+            <p class="goldenText inlineText">glow golden</p>, showing that you supported me!</p>
+            <p>I'll also let you include a link to whatever you want (within reason) when somebody clicks on your
+               username!</p>
+            <p class="inlineText">Include this review's ID in your message, which is: "
+            <p id="reviewID" class="inlineText"></p>"</p>
+            <p> Disclaimer: This "adoption" will last until this website is taken offline, which could be at anytime. I
+               reserve
+               the right to decline usernames or links for any reason.</p>
+            </p>
+         </div>
+      </details>
+   </div>
+   <footer>
+      <p> Disclaimer: Reviews may contain mature language or themes due to the dataset.
+         thisgamereviewdoesnotexist.com
+         does not endorse anything said by the reviews. </p>
+      <p> Profile pictures made using stable diffusion. </p>
+      <p> Reviews, hours played, recommendation, helpful votes, and funny votes made using a fine-tuned GPT 3 model.
+      </p>
+      <p> Usernames (that aren't golden), products owned, amount of reviews, and date posted are randomly generated.
+      </p>
+      <p> Reviews were limited to a little over 100 words, as the API charges for longer outputs. Support the website
+         if you want to see longer reviews in the future :).</p>
+      <p> This website is not affiliated with Steam. </p>
+   </footer>
+   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+   <script>
+      kofiWidgetOverlay.draw('ai_nthony', {
+         'type': 'floating-chat',
+         'floating-chat.donateButton.text': 'Support Me',
+         'floating-chat.donateButton.background-color': '#212C3D',
+         'floating-chat.donateButton.text-color': '#66C0F4',
+      });
+   </script>
+   <script type='text/javascript' src="template.js"></script>
+</body>
+
+</html>
