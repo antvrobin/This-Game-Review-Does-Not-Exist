@@ -82,7 +82,7 @@ footer {
   color: rgb(197, 195, 192);
   font-size: 18px;
   border: 1px solid black;
-  transform: translate(0, 10px);
+  transform:translate(0,-25px);
 }
 
 #insideUpdates {
@@ -92,6 +92,10 @@ footer {
 
 details>summary {
   list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
 #updates:focus {
@@ -113,7 +117,7 @@ details>summary {
   overflow: hidden;
   margin: auto;
   border: 1px solid black;
-  transform: translate(0, -30px);
+  transform: translate(0, -38px);
 }
 
 a {
@@ -406,6 +410,7 @@ a {
   height:64px;
   background-color:rgb(23,26,33);
   transform: translate(0,-20px);
+  border-bottom:1px solid black;
 }
 
 #gameName{
