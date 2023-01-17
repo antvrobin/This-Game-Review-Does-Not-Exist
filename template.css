@@ -36,72 +36,72 @@ footer {
   padding-bottom: 10px;
 }
 
-.content{
+.content {
   min-height: calc(100vh - 185px);
   visibility: hidden;
 }
 
-#leftArrow{
-  position:absolute;
-  top:40%;
-  left:0%;
-  width:60px;
-  height:120px;
-  background: linear-gradient(90deg, rgb(19,28,39) 0%, rgb(25,37,52) 100%);
-  font-size:40px;
-  color:white;
+#leftArrow {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(90deg, rgb(19, 28, 39) 0%, rgb(25, 37, 52) 100%);
+  font-size: 40px;
+  color: white;
 }
 
-#leftArrow:hover{
-  background:linear-gradient(90deg, rgb(81, 142, 215) 0%, rgb(25,37,52) 100%);
-  cursor:pointer;
+#leftArrow:hover {
+  background: linear-gradient(90deg, rgb(81, 142, 215) 0%, rgb(25, 37, 52) 100%);
+  cursor: pointer;
 }
 
-#rightArrow{
-  position:absolute;
-  top:40%;
-  right:0%;
-  width:60px;
-  height:120px;
-  background: linear-gradient(90deg, rgb(25,37,52) 0%, rgb(19,28,39) 100%);
-  font-size:40px;
-  color:white;
+#rightArrow {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(90deg, rgb(25, 37, 52) 0%, rgb(19, 28, 39) 100%);
+  font-size: 40px;
+  color: white;
 }
 
-#rightArrow:hover{
-  background:linear-gradient(90deg,rgb(25,37,52) 0%, rgb(81, 142, 215) 100%);
-  cursor:pointer;
+#rightArrow:hover {
+  background: linear-gradient(90deg, rgb(25, 37, 52) 0%, rgb(81, 142, 215) 100%);
+  cursor: pointer;
 }
 
 #updates {
   border-radius: 10px;
   text-align: center;
-  cursor:pointer;
-  margin:auto;
-  width:616px;
-  background-color: rgb(22,32,45);
-  color:  rgb(197,195,192);
+  cursor: pointer;
+  margin: auto;
+  width: 616px;
+  background-color: rgb(22, 32, 45);
+  color: rgb(197, 195, 192);
   font-size: 18px;
   border: 1px solid black;
-  transform:translate(0, 10px);
+  transform: translate(0, 10px);
 }
 
-#insideUpdates{
-  color:rgb(172, 178, 184);
-  cursor:auto;
+#insideUpdates {
+  color: rgb(172, 178, 184);
+  cursor: auto;
 }
 
-details > summary {
+details>summary {
   list-style: none;
 }
 
-#updates:focus{
-  width:500px;
+#updates:focus {
+  width: 500px;
 }
 
 #updatesTitle {
   text-align: center;
-  font-size:20px;
+  font-size: 20px;
 }
 
 #reviewDiv {
@@ -113,16 +113,18 @@ details > summary {
   max-height: 700px;
   overflow: hidden;
   margin: auto;
-  border:1px solid black;
+  border: 1px solid black;
 }
 
-a { outline: none; }
+a {
+  outline: none;
+}
 
-#idDiv{
-  float:left;
-  color:rgb(100, 117, 128);
+#idDiv {
+  float: left;
+  color: rgb(100, 117, 128);
   font-size: 12px;
-  transform:translate(3px, 15px);
+  transform: translate(3px, 15px);
 }
 
 #reviewBreak {
@@ -151,15 +153,15 @@ a { outline: none; }
   white-space: nowrap;
 }
 
-#usernameDiv{
+#usernameDiv {
   width: 145px;
-  height:14px;
-  display:inline-block;
-  padding-bottom:30px;
+  height: 14px;
+  display: inline-block;
+  padding-bottom: 30px;
 }
 
-#username:hover{
-  cursor:pointer;
+#username:hover {
+  cursor: pointer;
 }
 
 #prods {
@@ -168,9 +170,9 @@ a { outline: none; }
   float: left;
 }
 
-#prods:hover{
-  color:rgb(86,162,206);
-  cursor:pointer;
+#prods:hover {
+  color: rgb(86, 162, 206);
+  cursor: pointer;
 }
 
 #amtOfReviews {
@@ -180,9 +182,9 @@ a { outline: none; }
   float: left;
 }
 
-#amtOfReviews:hover{
-  color:rgb(86,162,206);
-  cursor:pointer;
+#amtOfReviews:hover {
+  color: rgb(86, 162, 206);
+  cursor: pointer;
 }
 
 #recommendation {
@@ -190,12 +192,12 @@ a { outline: none; }
   height: 40px;
   float: right;
   background-color: rgb(18, 26, 36);
-  transform:translate(0, 8px);
+  transform: translate(0, 8px);
 }
 
-#recommendation:hover{
-  background-color: rgb(47,55,66);
-  cursor:pointer;
+#recommendation:hover {
+  background-color: rgb(47, 55, 66);
+  cursor: pointer;
 }
 
 #recoPic {
@@ -204,41 +206,41 @@ a { outline: none; }
   padding-right: 10px;
 }
 
-#yesButtonImg{
-  background:url("OtherImages/thumbsUpRealNoBack.png");
+#yesButtonImg {
+  background: url("OtherImages/thumbsUpRealNoBack.png");
   background-size: 16px 16px;
-  width:16px;
-  height:16px;
+  width: 16px;
+  height: 16px;
   transform: translate(-1px, 3px);
 }
 
-#noButtonImg{
-  background:url("OtherImages/thumbsUpFlippedNoBack.png");
+#noButtonImg {
+  background: url("OtherImages/thumbsUpFlippedNoBack.png");
   background-size: 16px 16px;
-  width:16px;
-  height:16px;
+  width: 16px;
+  height: 16px;
   transform: translate(-1px, 3px);
 }
 
-#funnyButtonImg{
-  background:url("OtherImages/smile.png");
+#funnyButtonImg {
+  background: url("OtherImages/smile.png");
   background-size: 16px 16px;
-  width:16px;
-  height:16px;
+  width: 16px;
+  height: 16px;
   transform: translate(-1px, 4px);
 }
 
-#awardButtonImg{
-  background:url("OtherImages/award.png");
+#awardButtonImg {
+  background: url("OtherImages/award.png");
   background-size: 16px 16px;
-  width:16px;
-  height:16px;
+  width: 16px;
+  height: 16px;
   transform: translate(-1px, 4px);
 }
 
-.round:hover{
-  background-color:rgb(102,192,244);
-  color:white;
+.round:hover {
+  background-color: rgb(102, 192, 244);
+  color: white;
 }
 
 #recommendationText {
@@ -263,7 +265,7 @@ a { outline: none; }
 #postedDate {
   color: rgb(80, 94, 109);
   font-size: 10px;
-  transform:translate(0, 5px);
+  transform: translate(0, 5px);
 }
 
 #reviewText {
@@ -348,23 +350,23 @@ a { outline: none; }
   transform: translate(0, -15px);
 }
 
-.goldenText{
+.goldenText {
   color: rgb(252, 248, 9);
   text-shadow:
-      0 0 5px rgb(252, 248, 9),
-      0 0 10px rgb(252, 248, 9),
-      0 0 15px rgb(252, 248, 9),
-      0 0 20px rgb(252, 248, 9),
-      0 0 25px #fff,
-      0 0 30px #fff,
-      0 0 35px #fff;
-    
+    0 0 5px rgb(252, 248, 9),
+    0 0 10px rgb(252, 248, 9),
+    0 0 15px rgb(252, 248, 9),
+    0 0 20px rgb(252, 248, 9),
+    0 0 25px #fff,
+    0 0 30px #fff,
+    0 0 35px #fff;
+
   animation: glowExpand 1s ease-in-out infinite alternate;
 }
 
 
-@keyframes glowExpand{
-  100%{
+@keyframes glowExpand {
+  100% {
     text-shadow:
       0 0 10px rgb(252, 248, 9),
       0 0 15px rgb(252, 248, 9),
@@ -376,11 +378,11 @@ a { outline: none; }
   }
 }
 
-.inlineText{
-  display:inline;
+.inlineText {
+  display: inline;
 }
 
-#notAffiliated{
+#notAffiliated {
   font-size: 20px;
   font-weight: bold;
 }
