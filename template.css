@@ -54,6 +54,7 @@ footer {
 
 #leftArrow:hover{
   background:linear-gradient(90deg, rgb(81, 142, 215) 0%, rgb(25,37,52) 100%);
+  cursor:pointer;
 }
 
 #rightArrow{
@@ -69,6 +70,7 @@ footer {
 
 #rightArrow:hover{
   background:linear-gradient(90deg,rgb(25,37,52) 0%, rgb(81, 142, 215) 100%);
+  cursor:pointer;
 }
 
 #updates {
@@ -203,30 +205,32 @@ a { outline: none; }
 }
 
 #yesButtonImg{
-  background:url("https://store.akamai.steamstatic.com/public/shared/images/buttons/icons_16.png?v=");
-  background-position: -112px -16px;
+  background:url("OtherImages/thumbsUpRealNoBack.png");
+  background-size: 16px 16px;
   width:16px;
   height:16px;
   transform: translate(-1px, 3px);
 }
 
 #noButtonImg{
-  background:url("https://store.akamai.steamstatic.com/public/shared/images/buttons/icons_16.png?v=");
-  background-position: -64px -16px;
+  background:url("OtherImages/thumbsUpFlippedNoBack.png");
+  background-size: 16px 16px;
   width:16px;
   height:16px;
   transform: translate(-1px, 3px);
 }
 
 #funnyButtonImg{
-  background:url("https://store.akamai.steamstatic.com/public/shared/images/buttons/icons_16.png?v=");
-  background-position: -208px -16px;
+  background:url("OtherImages/smile.png");
+  background-size: 16px 16px;
   width:16px;
   height:16px;
   transform: translate(-1px, 4px);
 }
 
 #awardButtonImg{
+  background:url("OtherImages/award.png");
+  background-size: 16px 16px;
   width:16px;
   height:16px;
   transform: translate(-1px, 4px);
@@ -374,4 +378,9 @@ a { outline: none; }
 
 .inlineText{
   display:inline;
+}
+
+#notAffiliated{
+  font-size: 20px;
+  font-weight: bold;
 }
