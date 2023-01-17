@@ -63,7 +63,7 @@ function changeReviewFromID(ID) {
 	if(filterText == true){
 		document.getElementById("reviewText").innerHTML = reviewList[4];
 		//I think these are the main instances of profanity in the reviews. More might be added later.
-		document.getElementById("reviewText").innerHTML = document.getElementById("reviewText").innerHTML.replace(/fuck|pussy|shit|motherfuck/gi, function(word){
+		document.getElementById("reviewText").innerHTML = document.getElementById("reviewText").innerHTML.replace(/fuck|pussy|sex|shit|motherfuck/gi, function(word){
 			return word.replace(/./g, "*")
 		});
 	}
