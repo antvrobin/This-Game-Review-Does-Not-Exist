@@ -91,6 +91,27 @@ footer {
   height:20px;
 }
 
+#langFiltDiv{
+  position:absolute;
+  width:200px;
+  height:fit-content;
+  top:12%;
+  left:1%;
+}
+
+#gamesSearch{
+  background-color: rgb(49,98,130);
+}
+
+#nums{
+  background-color:rgb(49,98,130);
+}
+
+#langFilt{
+  transform: translate(47px,7px) scale(2);
+  accent-color:rgb(49,98,130);
+}
+
 #searchGames {
   border-radius: 10px;
   text-align: center;

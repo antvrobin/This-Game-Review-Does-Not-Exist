@@ -5,6 +5,7 @@ var reviews = { "Portal 2": { "reviews": { "1": ["6388.5", "True", "569", "688",
 
 var donatorsDict = {};
 var currentReviewID = null;
+var filterText = false;
 
 //This may not be the best way to do this, but it works for now.
 window.onload = function () {
@@ -56,7 +57,16 @@ function changeReviewFromID(ID) {
 	var usernameElement = document.getElementById("username");
 	document.getElementById("helpfulVotes").innerHTML = reviewList[2] + " people found this review helpful";
 	document.getElementById("funnyVotes").innerHTML = reviewList[3] + " people found this review funny";
-	document.getElementById("reviewText").innerHTML = reviewList[4];
+	if(filterText == false){
+		document.getElementById("reviewText").innerHTML = reviewList[4];
+	}
+	if(filterText == true){
+		document.getElementById("reviewText").innerHTML = reviewList[4];
+		//I think these are the main instances of profanity in the reviews. More might be added later.
+		document.getElementById("reviewText").innerHTML = document.getElementById("reviewText").innerHTML.replace(/fuck|pussy|shit|motherfuck/gi, function(word){
+			return word.replace(/./g, "*")
+		});
+	}
 	document.getElementById("prods").innerHTML = reviewList[5] + " products in account";
 	document.getElementById("amtOfReviews").innerHTML = reviewList[6] + " reviews";
 	document.getElementById("postedDate").innerHTML = "POSTED: " + reviewList[7];
@@ -101,5 +111,16 @@ function goToReview(){
 		changeReviewFromID(reviews[gameSelected]["reviews"][reviewSelected][9].replace("Images/", "").replace(".png", ""));
 	}else{
 		alert("Please enter a valid game name.");
+	}
+}
+
+function filter(){
+	var languageFilter = document.getElementById("langFilt");
+	if(languageFilter.checked == true){
+		filterText = true;
+		changeReviewFromID(currentReviewID);
+	}else{
+		filterText = false;
+		changeReviewFromID(currentReviewID);
 	}
 }
