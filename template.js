@@ -10,6 +10,11 @@ var currentReviewID = null;
 window.onload = function () {
 	//Load up a random review on page load.
 	var keys = Object.keys(reviews);
+	for(var i = 0; i < keys.length; i++){
+		var ele = document.createElement("option");
+		ele.value = keys[i];
+		document.getElementById("gamesDataList").appendChild(ele)
+	}
 	var randomNum = Math.floor(keys.length * Math.random());
 	var randomGame = reviews[keys[randomNum]];
 	keys = Object.keys(randomGame["reviews"]);
@@ -58,7 +63,7 @@ function changeReviewFromID(ID) {
 	usernameElement.innerHTML = reviewList[8];
 	document.getElementById("profPic").src = reviewList[9];
 	document.getElementById("reviewID").innerHTML = ID;
-	currentReviewID = ID;
+	currentReviewID = parseInt(ID);
 	if (ID in donatorsDict) {
 		usernameElement.innerHTML = donatorsDict[ID];
 		usernameElement.classList.add("goldenText");
@@ -86,5 +91,15 @@ function rightArrowChange() {
 		changeReviewFromID(currentReviewID + 1);
 	} else {
 		changeReviewFromID(0);
+	}
+}
+
+function goToReview(){
+	var gameSelected = document.getElementById("gamesSearch").value;
+	var reviewSelected = document.getElementById("nums").value;
+	if(Object.keys(reviews).includes(gameSelected)){
+		changeReviewFromID(reviews[gameSelected]["reviews"][reviewSelected][9].replace("Images/", "").replace(".png", ""));
+	}else{
+		alert("Please enter a valid game name.");
 	}
 }

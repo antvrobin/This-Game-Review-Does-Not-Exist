@@ -33,6 +33,7 @@ footer {
   font-size: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
+  transform:translate(0, 10px);
 }
 
 .content {
@@ -85,6 +86,28 @@ footer {
   transform:translate(0,-25px);
 }
 
+#goButton{
+  width:50px;
+  height:20px;
+}
+
+#searchGames {
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  width: 616px;
+  background-color: rgb(22, 32, 45);
+  color: rgb(197, 195, 192);
+  font-size: 18px;
+  border: 1px solid black;
+  transform: translate(0, -14px);
+}
+
+#insideSearchGames{
+  color: rgb(172, 178, 184);
+}
+
 #insideUpdates {
   color: rgb(172, 178, 184);
   cursor: auto;
@@ -129,6 +152,10 @@ a {
   color: rgb(100, 117, 128);
   font-size: 12px;
   transform: translate(3px, 15px);
+}
+
+#searchGamesTitle{
+  font-size: 20px;
 }
 
 #reviewBreak {
