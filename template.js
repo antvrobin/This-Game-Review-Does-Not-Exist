@@ -2,6 +2,8 @@ var reviews = { "Portal 2": { "reviews": { "1": ["6388.5", "True", "569", "688",
 
 //This is what a filled out entry in the donatorsDict would look like:
 //var donatorsDict = {252: "PurplePanda"};
+
+var donatorsDict = {};
 var currentReviewID = null;
 
 //This may not be the best way to do this, but it works for now.
