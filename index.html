@@ -6,7 +6,7 @@ fix most of the issues, but hey, it works.-->
 <head>
    <title>This Game Review Does Not Exist</title>
    <meta name="description" content="1000 AI-Generated Game Reviews">
-   <link rel="stylesheet" href="template.css">
+   <link rel="stylesheet" href="template.css?2.02">
    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -78,16 +78,11 @@ fix most of the issues, but hey, it works.-->
             <p>Love this Review? <b>Adopt it.</b> Click for more info.</p>
          </summary>
          <div id="insideUpdates">
-            <p>Support me for $5 (bottom left of the page) and I'll change the username on any review (that isn't
-               already adopted) to whatever you
-               want
-               (within reason). Include the username you want and the review's ID in the "Your message" spot!</p>
-            <p class="inlineText">Your review's username will
-            <p class="goldenText inlineText">glow golden</p>, showing that you supported me!</p>
+            <p>Support me for $5 (bottom left of the page) to adopt a review! You'll get to choose a custom username for any review that isn't already adopted, and that username will glow!</p>
+            <p class="inlineText">For example, the last supporter's username was: <p id="lastSupporter" class="goldenText inlineText"></p>, and they adopted <p class="inlineText" id="lastAdoptedGame"></p></p>
             <p> Disclaimer: This "adoption" will last until this website is taken offline, which could be at anytime. I
                reserve
-               the right to decline usernames for any reason.</p>
-            <p>Donations will solely be used for development/hosting expenses, and possibly updates or new sites in the
+               the right to decline usernames for any reason (too offensive, inappropriate, etc.). Donations will solely be used for development/hosting expenses, and possibly updates or new sites in the
                future. I did not create this website for financial gain.</p>
             </p>
          </div>
@@ -136,7 +131,8 @@ fix most of the issues, but hey, it works.-->
       <p> Reviews were limited to a little over 100 words, as the API charges for longer outputs. Support the website
          if you want to see longer reviews in the future :).</p>
       <a id="githubLink" href="https://github.com/antvrobin/This-Game-Review-Does-Not-Exist">If you have any questions
-         or concerns, open an issue on GitHub:<img id="githubImg" src="OtherImages/githubDark.png"></a>
+         or concerns, open an issue on GitHub: <img id="githubImg" src="OtherImages/githubDark.png"></a>
+         <a id="contactMe" href="mailto:anthonyvrobin@gmail.com"> Contact me by email: <img id="emailImg" src="OtherImages/email.png"></a>
    </footer>
    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
    <script>
@@ -147,7 +143,7 @@ fix most of the issues, but hey, it works.-->
          'floating-chat.donateButton.text-color': '#66C0F4',
       });
    </script>
-   <script type='text/javascript' src="template.js?2.01"></script>
+   <script type='text/javascript' src="template.js?2.02"></script>
 </body>
 
 </html>

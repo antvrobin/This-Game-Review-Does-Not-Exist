@@ -132,6 +132,7 @@ footer {
 #insideUpdates {
   color: rgb(172, 178, 184);
   cursor: auto;
+  font-size: 16px;
 }
 
 details>summary {
@@ -442,6 +443,16 @@ a {
 #githubLink{
   text-decoration: none;
   color: rgb(127, 152, 160);
+}
+
+#contactMe{
+  text-decoration: none;
+  color: rgb(127, 152, 160);
+}
+
+#emailImg{
+  width:48px;
+  height:32px;
 }
 
 #githubImg{
