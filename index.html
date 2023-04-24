@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- Code could definitely be improved haha. I made this pretty quickly. With enough time, I think I could
+fix most of the issues, but hey, it works.-->
+<html lang="en">
+
+<head>
+   <title>This Game Review Does Not Exist</title>
+   <meta name="description" content="1000 AI-Generated Game Reviews">
+   <link rel="stylesheet" href="template.css?2.03">
+   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+   <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+   <div id="topOfPage">
+      <h1 class="whiteText" id="topTitle">This Game Review Does Not Exist</h1>
+      <div id="langFiltDiv">
+      <label id="languageFilterText" for="langFilt" class="whiteText">Profanity Filter: </label><br>
+      <input type="checkbox" id="langFilt" name="langFilt" onchange="filter()">
+      </div>
+   </div>
+   <div class="content">
+      <h3 id="gameName" class="whiteText"></h3>
+      <div class="break" id="reviewBreak"></div>
+      <div id="reviewDiv" onmouseover="highlightText(true);" onmouseout="highlightText(false);">
+         <div id="profileStuff">
+            <!--I am going to add placeholder data.
+      I will either delete it when I add the
+      data via code or I will just replace it.-->
+            <img id="profPic">
+            <!--Profile Pic-->
+            <div id="usernameDiv">
+               <p id="username"></p> <!--Username-->
+            </div>
+            <p id="prods"></p> <!--Products in Account-->
+            <p id="amtOfReviews"></p> <!--Amount of Reviews-->
+         </div>
+         <div id="recommendation">
+            <img id="recoPic">
+            <!--Thumbs Up or Thumbs Down-->
+            <h2 id="recommendationText">Recommended</h2>
+            <p id="hoursText"></p> <!--Hours on Record, Hours at Review Time-->
+         </div>
+         <div id="actualReview">
+            <p id="postedDate"></p> <!--Posted Date-->
+            <p id="reviewText">
+            </p> <!--Review-->
+         </div>
+         <div id="helpfulBreak"></div>
+         <div id="helpfulOrFunnyVoting">
+            <p id="helpfulText">Was this review helpful?</p>
+            <button id="yesButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="yesButtonImg">Yes</button>
+            <button id="noButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="noButtonImg">No</button>
+            <button id="funnyButton" class="round"><img
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7"
+                  id="funnyButtonImg">Funny</button>
+            <button id="awardButton" class="round"><img id="awardButtonImg"
+                  src="data:image/gif;base64,R0lGODlhAQABAPcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAABAAEAAAgEAP8FBAA7">Award</button>
+         </div>
+         <div id="votesDiv">
+            <p id="helpfulVotes"></p> <!--Helpful-->
+            <p id="funnyVotes"></p> <!--Funny-->
+         </div>
+         <div id="idDiv">
+            <p id="parentReviewID" class="inlineText">Review ID:
+            <p id="reviewID" class="inlineText"></p>
+            </p>
+         </div>
+      </div>
+      <details id="updates">
+         <summary id="updatesTitle">
+            <p>Love this Review? <b>Adopt it.</b> Click for more info.</p>
+         </summary>
+         <div id="insideUpdates">
+            <p>Support me for $5 (bottom left of the page) to adopt a review! You'll get to choose a custom username for any review that isn't already adopted, and that username will glow!</p>
+            <p class="inlineText">For example, the last supporter's username was: <p id="lastSupporter" class="goldenText inlineText"></p>, and they adopted <p class="inlineText" id="lastAdoptedGame"></p></p>
+            <p> Disclaimer: This "adoption" will last until this website is taken offline, which could be at anytime. I
+               reserve
+               the right to decline usernames for any reason (too offensive, inappropriate, etc.). Donations will solely be used for development/hosting expenses, and possibly updates or new sites in the
+               future. I did not create this website for financial gain.</p>
+            </p>
+         </div>
+      </details>
+      <details id="searchGames">
+         <summary id="searchGamesTitle">
+            <p>Click here to search for specific games!</p>
+         </summary>
+         <div id="insideSearchGames">
+            <label for="gamesSearch">Search for a game!</label>
+            <input list="gamesDataList" name="gamesSearch" id="gamesSearch">
+            <!--This datalist is populated by the names of the game in the dictionary via js.-->
+            <datalist id="gamesDataList">
+            </datalist>
+            <br>
+            <br>
+            <label for="nums">Which Review #? (Each game has 5.)</label>
+            <select id="nums" name="nums">
+               <option value=1>Review 1</option>
+               <option value=2>Review 2</option>
+               <option value=3>Review 3</option>
+               <option value=4>Review 4</option>
+               <option value=5>Review 5</option>
+            </select>
+            <br>
+            <br>
+            <button class="round" id="goButton" onclick="goToReview()">Go</button>
+         </div>
+      </details>
+      <button onclick="leftArrowChange()" id="leftArrow"><</button>
+            <button onclick="rightArrowChange()" id="rightArrow">></button>
+   </div>
+   <footer>
+      <p id="notAffiliated"> This website is not affiliated with Steam or Valve Corporation. I claim no legal ownership
+         or rights to any of the reviews generated by this AI. I made this to educate people on the power of AI!</p>
+      <p> Disclaimer: Reviews may contain mature language or themes due to the dataset. I do not endorse anything said
+         by the reviews. All reviews are not reviewed. (It takes a very long time to go through all 1000.) As I work
+         through reviewing them all, in extreme cases, reviews may be removed and replaced with another review from the
+         same game if they are deemed too inappropriate or offensive. Please raise an issue on the GitHub below if you
+         have any issues at all.</p>
+      <p> Profile pictures made using stable diffusion. </p>
+      <p> Reviews, hours played, recommendation, helpful votes, and funny votes made using a fine-tuned GPT 3 model. Fine-tuning was done via <a id="noCodeLink" href="https://no-code-ai-model-builder.com?via=AI-nthony">No Code AI Model Builder (AFFILIATE LINK)</a>
+      </p>
+      <p> Usernames (that aren't golden), products owned, amount of reviews, and date posted are randomly generated.
+      </p>
+      <p> Reviews were limited to a little over 100 words, as the API charges for longer outputs. Support the website
+         if you want to see longer reviews in the future :).</p>
+      <a id="githubLink" href="https://github.com/antvrobin/This-Game-Review-Does-Not-Exist">If you have any questions
+         or concerns, open an issue on GitHub: <img id="githubImg" src="OtherImages/githubDark.png"></a>
+         <a id="contactMe" href="mailto:anthonyvrobin@gmail.com"> Contact me by email: <img id="emailImg" src="OtherImages/email.png"></a>
+   </footer>
+   <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+   <script>
+      kofiWidgetOverlay.draw('ai_nthony', {
+         'type': 'floating-chat',
+         'floating-chat.donateButton.text': 'Support Me',
+         'floating-chat.donateButton.background-color': '#212C3D',
+         'floating-chat.donateButton.text-color': '#66C0F4',
+      });
+   </script>
+   <script type='text/javascript' src="template.js?2.03"></script>
+</body>
+
+</html>
